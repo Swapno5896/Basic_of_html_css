@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .photo_frame{
+            height: 200px;
+            width: 300px;
+            border: 4px solid goldenrod;
+            border-radius: 30px;
+            position: relative;
+        }
+        .photo_frame img{
+            width: 100%;
+        }
+        .photo_detail{
+            height: 200px;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            display: none;
+        }
+        .photo_frame:hover .photo_detail{
+          
+            display: block;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <section class="photo_album">
+        <div class="photo_frame">
+            <div class="photo"><img src="images/tiger.jpg" alt=""></div>
+            <div class="photo_detail">
+                <h3>Tiger</h3>
+                <p> adipisicing elit. Laborum cum eligendi accusantium magnam maxime esse voluptatem, qui expedita quas omnis aspernatur repellendus tempora eveniet beatae quos consectetur praesentium laboriosam cupiditate.</p>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .names:hover{
+        color: aqua;
+    }
+    input:focus{
+        font-size: 17px;
+    }
+    li:first-child{
+        color: red;
+    }    
+    li:last-child{
+        color: red;
+    }
+    /* 2n means even child will be selected */
+    li:nth-child(2n){ 
+        color: blue;
+    }
+ /* normaly if user do not visited any site then it shows in blue color but we can over wright by visited */
+    a:visited{
+        color: blue;
+    }
+</style>
+<body>
+    <h1 class="names">Swapno</h1>
+    <h1 class="names">Simanto</h1>
+    <h1 class="names">Joy</h1>
+
+    <hr>
+    <input type="text" name="name">   
+    <input type="text" name="pass">
+    <hr>
+    <ul>
+        <li>alia</li>
+        <li>sunny</li>
+        <li>krity</li>
+        <li>natasa</li>
+    </ul>
+
+    <hr>
+    <a href="www.mone.com">aa</a>
+    <a href="https://www.w3schools.com/css/">css</a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+          
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 1px solid gray;
+        }
+        /* positon fixed means no mater waht happen it will appear in same place on matter how much we scroll */
+        #first{
+            background-color: aqua;
+            position:fixed;
+        }
+        /* position relative means realitive ar basai jawa. relative ar basai galau nijer jaiga or basa jaiga khale thaklau kew ase nah */
+        #second{
+            background-color: rgb(104, 113, 113);
+            position: relative;
+            left: 50px;
+        }
+        /* position absolute means if he move from his place then other will capture the place  */
+        #third{
+            background-color: rgb(166, 188, 41);
+            position: absolute;
+            left: 100px;
+        }
+    </style>
+
+    <div class="conteiner">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

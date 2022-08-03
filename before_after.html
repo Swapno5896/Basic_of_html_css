@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* add some content after or before the element we selected */
+    h1::after{
+        content: ' is very beautiful';
+        color: aqua;
+
+    }
+    h1::before{
+        content: "Cursh : ";
+        color: blueviolet;
+    }
+
+    /* if we want to add counter without using order list */
+    body {
+  counter-reset: section;                      /* Set a counter named 'section', and its initial value is 0. */
+}
+
+p::before {
+  counter-increment: section;                  /* Increment the value of section counter by 1 */
+  content: "Crush " counter(section) ": ";   /* Display the word 'Section ', the value of
+                                                  section counter, and a colon before the content
+                                                  of each h3 */
+}
+    </style>
+
+    <h1>Alia</h1>
+    <h1>Dalia</h1>
+    <h1>Kalia</h1>
+    <hr>
+    <p>a</p>
+    <p>b</p>
+    <p>l</p>
+    <p>d</p>
+    <p>e</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.box{
+    height: 100px;
+    width: 100px;
+
+}
+.outer{
+    background-color: rgb(65, 210, 210);
+}
+.inner{
+    background-color: blue;
+    transform: scale(.5) rotate(45deg);
+}
