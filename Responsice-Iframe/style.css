@@ -1,0 +1,19 @@
+#iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  border: 3px solid red;
+}
+#iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1365px) {
+  #iframe-container {
+    height: 610px;
+  }
+}
