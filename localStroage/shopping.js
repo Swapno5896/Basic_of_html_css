@@ -1,14 +1,14 @@
-const displayLocalStorageCart = () =>{
+const displayLocalStorageCart = () => {
     const cart = getCart()
-    for (const name in cart){
+    for (const name in cart) {
         displayProduct(name)
     }
 }
 
-const addItem = () =>{
+const addItem = () => {
     const nameField = document.getElementById('product-name')
     const name = nameField.value
-    if(!name){
+    if (!name) {
         return
     }
     // Display product
@@ -18,33 +18,41 @@ const addItem = () =>{
     nameField.value = ''
 }
 
-const displayProduct =(name)=>{
+const displayProduct = (name) => {
     const ul = document.getElementById('products')
     const li = document.createElement('li')
     li.innerText = name
     ul.appendChild(li)
 }
 
-const getCart = () =>{
+const getCart = () => {
     const cart = localStorage.getItem('cart')
     let cartObj;
-    if(cart) {
+    if (cart) {
         cartObj = JSON.parse(cart)
     }
-    else{
+    else {
         cartObj = {}
     }
 
     return cartObj;
 }
 
-const addProductToCart = name =>{
+const addProductToCart = name => {
     const cart = getCart();
-    cart[name] = 1
+    if (cart[name]) {
+        cart[name] = cart[name] + 1
+    }
+    else{
+        cart[name] = 1
+    }
     const cartStringified = JSON.stringify(cart)
-    localStorage.setItem('cart',cartStringified)
+    localStorage.setItem('cart', cartStringified)
     console.log(cart);
 }
 
-
+const PlaceOrder = () => {
+    document.getElementById('products').innerText = ''
+    localStorage.removeItem('cart')
+}
 displayLocalStorageCart()
